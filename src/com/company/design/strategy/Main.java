@@ -8,7 +8,7 @@ public class Main {
         //base64 전략 생성
         EncodingStrategy base64 = new Base64Strategy();
 
-        //normal 전략 생
+        //normal 전략 생성
         EncodingStrategy normal = new NormalStrategy();
 
         String message = "hello Java";
