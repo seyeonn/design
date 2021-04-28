@@ -66,7 +66,7 @@
 -----
 
 
-## Singleton pattern
+## [Singleton pattern](https://github.com/seyeonn/design/tree/master/src/com/company/design/singleton)
 - Singleton패턴은 어떠한 클래스(객체)가 유일하게 1개만 존재할 때 사용한다.
 - 이를 주로 사용하는 곳은 서로 자원을 공유할 때 사용하는데, 실물 세계에서는 프린터가 해당되며, 실제 프로그래밍에서는 TCP Socket 통신에서 서버와 연결된 connect 객체에 주로 사용한다.
 - spring의 경우 bean 클래스나 객체는 기본적으로 상글톤으로 관리를 해야 한다. 직접 생성하지 않고, application context 를 통해 spring에서 관리 되고 있고, 그런 것들 자체가 단 하나의 객체만 존재하게 된다.
@@ -76,7 +76,7 @@
 
 <br>
 
-## Adapter pattern
+## [Adapter pattern](https://github.com/seyeonn/design/tree/master/src/com/company/design/adapter)
 - Adapter는 실생활에서는 100v 를 220v로 변경해주거나, 그 반대로 해주는 흔히 돼지코라고 불리는 변환기를 예로 들 수 있다.
 - 호환성이 없는 기존 클래스의 인터페이스를 변환하여 재사용할 수 있도록 한다.
 - SOLID 중에서 개방 폐쇄 원칙(OCP)를 따른다. 
@@ -85,19 +85,19 @@
 
 <br>
 
-## Proxy pattern
+## [Proxy pattern](https://github.com/seyeonn/design/tree/master/src/com/company/design/proxy)
 - Proxy는 대리인 이라는 뜻으로, 뭔가를 대신해서 처리하는 것.
 - Proxy Class를 통해서 대신 전달하는 형태로 설계되며, 실제 클라이언트는 Proxy로 부터 결과를 받는다.
 - Cache의 기능으로도 활용이 가능하다. 
 - Spring 같은 경우 Proxy pattern을 사용하여 AOP를 사용한다.
-- AOP 같은 경우, Proxy 기능을 통하여 특정한 메소드나 기능에 앞, 뒤로 내가 원하는 기능 또는 내가 원하는 메소드, 앞뒤로 넘어가는 arguement에 대해서 조작할 수 있고, 여러가지 흩어져있는 기능들을 동일하게 제공하도록 하나로 묶어줄 수 있다.
+- [AOP](https://github.com/seyeonn/design/tree/master/src/com/company/design/aop) 같은 경우, Proxy 기능을 통하여 특정한 메소드나 기능에 앞, 뒤로 내가 원하는 기능 또는 내가 원하는 메소드, 앞뒤로 넘어가는 arguement에 대해서 조작할 수 있고, 여러가지 흩어져있는 기능들을 동일하게 제공하도록 하나로 묶어줄 수 있다.
 - AOP는 특정 메소드가 얼마나 시간이 걸리는 지 측정할 때 사용한다. 관점 지향 특징으로 앞뒤를 살펴야 한다. 전후 메소드는 Runnable형으로 functional interface이다. 
 - 시간 체크 시에는 동시성 문제 때문에 AtomicLong을 사용한다.
 - SOLID 중에서 개방 폐쇄 원칙(OCP)과 의존 역전 원칙 (DIP)를 따른다.
 
 <br>
 
-## Decorator pattern
+## [Decorator pattern](https://github.com/seyeonn/design/tree/master/src/com/company/design/decorator)
 - 데코레이터 패턴은 기존 뼈대(클래스)는 유지하되, 이후 필요한 형태로 꾸밀 때 사용한다. 
 - 확장이 필요한 경우 상속의 대안으로도 활용 한다.
 - SOLID 중에서 개방 폐쇄 원칙(OCP)과 의존 역전 원칙 (DIP)를 따른다.
@@ -105,13 +105,13 @@
 
 <br>
 
-## Observer pattern
+## [Observer pattern](https://github.com/seyeonn/design/tree/master/src/com/company/design/observer)
 - 관찰자 패턴은 변화가 일어 났을 때, 미리 등록된 다른 클래스에 통보(이벤트를 전달)해주는 패턴을 구현한 것이다.
 - 많이 보이는 곳은 event listener 에서 해당 패턴을 사용하고 있다. - 표준적인 예시
 
 <br>
 
-## Facade pattern
+## [Facade pattern](https://github.com/seyeonn/design/tree/master/src/com/company/design/facade)
 - Facade는 건물의 앞쪽 정면 이라는 뜻으로, 건물의 뒷쪽에서는 뭐가 있는지 모르는 것을 뜻한다.
 - 여러 개의 객체와 실제 사용하는 서브 객체의 사이에 복잡한 의존관계가 있을 때, 중간에 facade라는 객체를 두고, 여기서 제공하는 interface만을 활용하여 기능을 사용하는 방식이다.
 - facade는 자신이 가지고 있는 각 클래스의 기능을 명확히 알아야 한다.
@@ -123,7 +123,7 @@
 
 <br>
 
-## Strategy pattern
+## [Strategy pattern](https://github.com/seyeonn/design/tree/master/src/com/company/design/strategy)
 - 전략 패턴으로 불리며, 객체지향의 꽃이다.
 - 유사한 행위들을 캡슐화하여, 객체의 행위를 바꾸고 싶은 경우 직접 변경하는 것이 아닌 전략만 변경하여, 유연하게 확장하는 패턴 SOLID 중에서 개방 폐쇄 원칙(OCP)과 의존 역전 원칙 (DIP)를 따른다.
 - 전략 메서드를 가진 전략 객체 ( Normal Strategy - 인코딩을 하지 않는 기본 전략, Base64 Strategy )
